@@ -2255,6 +2255,10 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
 		.icon.major {
 			border: solid 1px;
 			display: inline-block;
