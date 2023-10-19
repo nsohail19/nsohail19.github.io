@@ -1,5 +1,5 @@
 body {
-    color: #768390;
+    color: #000000;
     background: #FFF;
     font-family: "Effra", Helvetica, sans-serif;
     padding: 0;
@@ -14,11 +14,13 @@ body {
   a {
     color: #FF6B6B;
   }
-  a:hover {
-    color: #ff9a9a;
-    text-decoration: none;
+  a:link,
+  a:visited,
+  a:hover,
+  a:active{
+      text-decoration: none;
   }
-  
+    
   .example-header {
     background: #3D4351;
     color: #FFF;
