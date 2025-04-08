@@ -5,11 +5,29 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
 <html>
 	<head>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+
+		<style>
+			.icon-container {
+			  display: flex;
+			  gap: 50px;
+			  text-align: center;
+			  justify-content: center;
+			align-items: center;
+			}
+			.icon-container a {
+			  font-size: 40px;
+			  color: #FFFFFF;
+			  text-decoration: none;
+			}
+			.icon-container a:hover {
+			  color: #333;
+			}
+		  </style>
+
 		<title style="color:black;">Noor Sohail</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -27,14 +45,16 @@
 					<header id="header">
 						<h1><b>Noor Sohail</b></h1>
 						<p>
-							Computational Biologist<br>
+							Bioinformatician<br>
 							Harvard Chan Bioinformatics Core<br>
 							Harvard T.H. Chan School of Public Health
 						</p>
 						<ul class="icons">
-							<li><a href="https://twitter.com/nosohail3" class="icon brands fa fa-twitter-square alt"><span class="label">Twitter</span></a></li>
-							<li><a href="https://github.com/nsohail19" class="icon brands fa fa-github alt"><span class="label">GitHub</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=UNMNBRoAAAAJ&hl=en&oi=ao" class="icon fa fa-google alt"><span class="label">Google Scholar</span></a></li>
+							<div class="icon-container">
+								<li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+								<li><a href="https://scholar.google.com/citations?user=UNMNBRoAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>
+								<li><a href="https://github.com/nsohail19" title="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
+							</div>
 						</ul>
 					</header>
 				</div>
@@ -42,9 +62,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">About Me</a></li>
-							<li><a href="#first">Publications</a></li>
-							<li><a href="#third">Work Experience</a></li>
+							<li><a href="index.html" class="active">About Me</a></li>
+							<li><a href="01_publications.html">Publications</a></li>
+							<li><a href="02_work_experience.html">Work Experience</a></li>
+							<li><a href="03_projects.html">Projects</a></li>
 						</ul>
 					</nav>
 
@@ -62,315 +83,12 @@
 											<a href="https://www.mskcc.org/research/ski/innovation-labs/single-cell-analytics-innovation-lab-sail"> Single-cell Analysis Innovation Lab</a> (SAIL) which is
 											led by <a href="https://www.mskcc.org/research/ski/labs/dana-pe-er">Dr. Dana Pe'er</a> at Memorial Sloan Kettering Cancer Center.</p>
 									</div>
-									<span class="image"><img src="images/IMG_5471_crop.jpg" alt="" /></span>
+									<span class="image"><img src="images/about_me/IMG_5471_crop.jpg" alt="" /></span>
 								</div>
 								<ul class="actions special">
 									<li><a href="informal.html" class="button primary">Informal about me</a></li>
 								</ul>
 							</section>
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Publications</h2>
-								</header>
-
-								<head>
-      
-									<!-- CSS style to set alternate table 
-											row using color -->
-									<style>
-										table {
-											border-collapse: collapse;
-											width: 100%;
-										}
-										  
-										th, td {
-											text-align: left;
-											padding: 8px;
-										}
-										  
-										tr:nth-child(odd) {
-											background-color:rgb(243, 243, 243);
-										}
-									</style>
-								</head>
-
-
-								<table style="width:device-width">
-									<col style="width:30%">
-									<col style="width:70%">
-									<thead>
-
-									<tr>
-										<td style="text-align: center; vertical-align: middle;">
-												<span class="image"><img src="images/seacells.png" alt="" width="100%" height="100%"/></span>
-										</td>
-
-										<td>
-											<div align="left" class="spotlight-content font18">
-												<h3>
-													<b><a href="https://www.nature.com/articles/s41587-023-01716-9" style="text-decoration:none;">SEACells infers transcriptional and epigenomic cellular states from single-cell genomics data</a></b>
-												</h3>
-												<p>Sitara Persad, Zi-Ning Choo, Christine Dien, <b><u>Noor Sohail</u></b>, Ignas Masilionis, Ronan Chaligné, Tal Nawy, Chrysothemis C. Brown, Roshan Sharma, Itsik Pe’er, Manu Setty, Dana Pe’er
-												</p>
-												<p>Nature Biotechnology (2023)</p>
-											</div>
-											</td>
-
-
-									<tr>
-										<td style="text-align: center; vertical-align: middle;">
-												<span class="image"><img src="images/9p.jpg" alt="" width="100%" height="100%"/></span>
-										</td>
-
-										<td>
-											<div align="left" class="spotlight-content font18">
-												<h3>
-													<b><a href="https://www.nature.com/articles/s43018-022-00443-5" style="text-decoration:none;">MACHETE identifies interferon-encompassing chromosome 9p21.3 deletions as mediators of immune evasion and metastasis</a></b>
-												</h3>
-												<p>Francisco M. Barriga, Kaloyan M. Tsanov, Yu-Jui Ho, <u><b>Noor Sohail</b></u>, Amy Zhang, Timour Baslan, 
-													Alexandra N. Wuest, Isabella Del Priore, Brigita Meškauskaitė, Geulah Livshits, Direna Alonso-Curbelo, 
-													Janelle Simon, Almudena Chaves-Perez, Dafna Bar-Sagi, 
-													Christine A. Iacobuzio-Donahue, Faiyaz Notta, Ronan Chaligne, Roshan Sharma, Dana Pe’er, Scott W. Lowe.</p>
-												<p>Nature Cancer (2022)</p>
-											</div>
-										  </td>
-
-
-
-										  <tr>
-											<td style="text-align: center; vertical-align: middle;">
-													<span class="image"><img src="images/beta.png" alt="" width="100%" height="100%"/></span>
-											</td>
-	
-											<td>
-												<div align="left" class="spotlight-content font18">
-													<h3>
-														<b><a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.9b02004" style="text-decoration:none;">Overcoming Challenging Substituent Perturbations with Multisite λ-Dynamics: A Case Study Targeting β-Secretase 1</a></b>
-													</h3>
-													<p>Jonah Z. Vilseck, <u><b>Noor Sohail</b></u>, Ryan L. Hayes, and Charles L. Brooks III.</p>
-													<p>The Journal of Physical Chemistry Letters (2019)</p>
-												</div>
-											  </td>
-										</tr>
-									</tr>
-
-									<tr>
-										<td style="text-align: center; vertical-align: middle;">
-												<span class="image"><img src="images/mt.jpg" alt="" width="100%" height="100%"/></span>
-										</td>
-
-										<td>
-											<div align="left" class="spotlight-content font18">
-												<h3>
-													<b><a href="https://aacrjournals.org/cancerres/article/79/7/1318/640355/Landscape-of-Germline-and-Somatic-Mitochondrial" style="text-decoration:none;">Landscape of Germline and Somatic Mitochondrial DNA Mutations in Pediatric Malignancies</a></b>
-												</h3>
-												<p>Petr Triska, Kristiyana Kaneva, Daria Merkurjev, <u><b>Noor Sohail</b></u>, Marni J. Falk, Timothy J. Triche Jr, Jaclyn A. Biegel, Xiaowu Gai.
-												</p>
-												<p>Cancer Research (2019)</p>
-											</div>
-										  </td>
-								  </table>
-
-							</section>
-
-						<!-- Third Section -->
-						<section id="third" class="main special">
-							<header class="major">
-								<h2>Work Experience</h2>
-								<ul class="actions special">
-									<li><a href="CV.html" class="button primary">Full CV</a></li>
-								</ul>
-							</header>
-								
-								<script src="https://use.typekit.net/bkt6ydm.js"></script>
-								<script>try{Typekit.load({ async: true });}catch(e){}</script>
-								<div class="container-fluid">
-									<div class="row example-centered">
-										<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-											<ul class="timeline timeline-centered">
-
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Apr 2023 - Present<br><br>
-															<span class="image"><img src="images/harvard.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title"><b>
-														Bioinformatician II<br>
-														Harvard T.H. Chan School of Public Health<br>
-														Harvard Chan Bioinformatics Core (HBC)
-													</b>
-												</h3>
-														<p>	
-															Interpreting omics data for labs within the larger Harvard community. Teaching workshops and modules to students on data analysis and bioinformatics methods.</p>
-													</div>
-												</li>
-
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Apr 2021 - Apr 2023<br><br>
-															<span class="image"><img src="images/ski.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title"><b>
-														Computational Biologist<br>
-														Sloan Kettering Instute<br>
-														Single-cell Analaysis Innovation Lab (SAIL)
-													</b>
-												</h3>
-														<p>	
-															Analyzing and creating pipelines for scRNA-seq with current computational approaches such as dimensionality reduction,
-															differential gene expression analysis, and GSEA.</p>
-													</div>
-												</li>
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>May 2020 - Aug 2020<br><br>
-															<span class="image"><img src="images/weill.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																Summer Research Intern<br>
-																Weill Cornell Medicine<br>
-																Cantley Lab
-															</b>
-														</h3>
-														<p>	
-															Mapped differential gene expression to proteins in order to investigate phosphorylation patterns.
-														</p>
-													</div>
-												</li>
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Jan 2020 - Mar 2020<br><br>
-															<span class="image"><img src="images/mcdb.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																Lab Prep Assistant<br>
-																University of Michigan
-															</b>
-														</h3>
-														<p>	
-															Prepared reagents and materials for an advanced laboratory biology course.
-														</p>
-													</div>
-												</li>
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>May 2018 - Aug 2018<br>May 2019 - Aug 2019<br><br>
-															<span class="image"><img src="images/vai.jpg" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																Summer Research Intern<br>
-																Van Andel Research Institute<br>
-																Triche Lab
-															</b>
-														</h3>
-														<p>	
-															Maintained and extended MTseeker, an R Bioconductor package that isolates variants in
-															mitochondrial DNA, to trace lineages in single cell samples.
-														</p>
-													</div>
-												</li>
-
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Jan 2018 - Apr 2018<br><br>
-															<span class="image"><img src="images/oami.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																Mathematics Tutor<br>
-																University of Michigan<br>
-															</b>
-														</h3>
-														<p>	
-															Mentored University of Michigan students one-on-one in Calculus 1 and 2 through the Office of Academic Multicultural Initiatives.
-														</p>
-													</div>
-												</li>
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Oct 2017 - Dec 2019<br><br>
-															<span class="image"><img src="images/um_chem_logo.jpg" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																Undergraduate Researcher<br>
-																University of Michigan<br>
-																Brooks Lab
-															</b>
-														</h3>
-														<p>
-															Simulated interactions between proteins and ligands using computational chemistry techniques to
-															determine free energies of binding.
-														</p>
-													</div>
-												</li>
-
-												<li class="timeline-item">
-													<div class="timeline-info">
-														<span>Sep 2016 - May 2020<br><br>
-															<span class="image"><img src="images/um_logo.png" alt="" width="200" height="200"/></span>
-														</span>
-													</div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h3 class="timeline-title">
-															<b>
-																University of Michigan
-															</b>
-														</h3>
-														<p>	
-															B.Sc Life Science Informatics													
-														</p>
-													</div>
-												</li>
-
-												<li class="timeline-item period">
-													<div class="timeline-info"></div>
-													<div class="timeline-marker"></div>
-													<div class="timeline-content">
-														<h2 class="timeline-title">2016</h2>
-													</div>
-												</li>
-
-											</ul>
-										</div>
-									</div>
-								</div>
-
-					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
