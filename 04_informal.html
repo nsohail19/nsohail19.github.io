@@ -18,21 +18,23 @@
   <div class="center" style="background-color:rgb(202,150,174);">
     <header id="header">
       <h1><b>Noor Sohail</b></h1>
-      <p>Bioinformatician<br>
-         Harvard Chan Bioinformatics Core<br>
-         Harvard T.H. Chan School of Public Health</p>
+      <p>
+        <span class="outlined">Bioinformatician</span><br>
+        <span class="plain">Harvard Chan Bioinformatics Core</span><br>
+        <span class="plain">Harvard T.H. Chan School of Public Health</span>
+      </p>
       <ul class="icons">
         <div class="icon-container">
           <li>
             <a href="https://scholar.google.com/citations?user=UNMNBRoAAAAJ&hl=en&oi=ao" target="_blank">
               <i class="fas fa-graduation-cap"></i>
-              <span class="icon-label">Google Scholar</span>
+              <span class="icon-label plain">Google Scholar</span>
             </a>
           </li>
           <li>
             <a href="https://github.com/nsohail19" target="_blank">
               <i class="fab fa-github"></i>
-              <span class="icon-label">GitHub</span>
+              <span class="icon-label plain">GitHub</span>
             </a>
           </li>
         </div>
@@ -49,7 +51,7 @@
       <li><a href="02_work_experience.html">Work Experience</a></li>
       <li><a href="01_publications.html">Publications</a></li>
       <li><a href="03_projects.html">Projects</a></li>
-      <li><a href="04_04_informal.html" class="active">About Me (Informal)</a></li>
+      <li><a href="04_informal.html" class="active">About Me (Informal)</a></li>
     </ul>
   </nav>
 
@@ -59,57 +61,68 @@
   <div id="main">
     <section id="informal" class="main">
       <div class="content">
+
         <header class="major">
           <h2>About Me (Informal)</h2>
         </header>
 
-        <!-- ───────────────────────────────────────
-             ZONE 1: Intro paragraph + portrait
-             Text fills the left, square photo right.
-             ─────────────────────────────────────── -->
-        <div class="informal-intro">
-          <p>When not working with my fellow scientists, I also collaborate frequently with
-          Tom Nook in real estate endeavors, where I have applied my experience in biology
-          to uncover a full fossil collection that has contributed to the meteoric rise of
-          our island to a five star rating.</p>
-          <div class="informal-photo">
-            <img src="images/about_me/IMG_20200313_002958.jpg" alt="Noor" />
-          </div>
-        </div>
+        <!-- ─────────────────────────────────────
+             ZONE 1
+             Portrait floated right; text wraps around it.
+             Three-image collage sits below the text,
+             full width inside the same block.
+             ───────────────────────────────────── -->
+        <div class="informal-top">
 
-        <!-- ───────────────────────────────────────
-             ZONE 2: Masonry photo grid
-             Left column (ig-tall) spans both rows —
-             creates a tall accent image beside two
-             shorter stacked images on the right.
-             ─────────────────────────────────────── -->
-        <div class="informal-grid">
-          <div class="ig-tall">
-            <img src="images/about_me/fossils.jpg" alt="Fossil collection" />
-          </div>
-          <div>
-            <img src="images/about_me/tom_nook.jpg" alt="Tom Nook" />
-          </div>
-          <div>
-            <img src="images/about_me/bread.jpg" alt="Bread" />
-          </div>
-        </div>
+          <div class="informal-top-text">
 
-        <!-- ───────────────────────────────────────
-             ZONE 3: Food photo + caption paragraph
-             Photo left, text right.
-             ─────────────────────────────────────── -->
-        <div class="informal-food">
+            <!-- Portrait: floated right via CSS, text flows around it -->
+            <div class="informal-portrait">
+              <img src="images/about_me/IMG_20200313_002958.jpg" alt="Noor" />
+            </div>
+
+            <p>When not working with my fellow scientists, I also collaborate frequently
+            with Tom Nook in real estate endeavors, where I have applied my experience
+            in biology to uncover a full fossil collection that has contributed to the
+            meteoric rise of our island to a five star rating.</p>
+
+            <p>In my free time I enjoy playing games with friends, reading a good mystery novel, and exploring new neighborhoods. 
+
+            </p>
+
+          </div><!-- /.informal-top-text -->
+
+          <!-- Three-image collage below the text, full width -->
+          <div class="photo-collage">
+            <img src="images/about_me/fossils.jpg"          alt="Fossil collection" />
+            <img src="images/about_me/tom_nook.jpg"         alt="Tom Nook" />
+            <img src="images/about_me/bread.jpg"            alt="Bread" />
+          </div>
+
+        </div><!-- /.informal-top -->
+
+        <!-- Divider between the two zones -->
+        <hr class="informal-divider" />
+
+        <!-- ─────────────────────────────────────
+             ZONE 2
+             Food image on the left (natural size, no crop),
+             text paragraph on the right.
+             ───────────────────────────────────── -->
+        <div class="informal-bottom">
           <img src="images/about_me/20220514_125737.jpg" alt="Food" />
           <p>When not studying living things, I can often be found consuming them.
-          I am a connoisseur of chocolate, boba, cookies, and other cultivated foods.</p>
+          I am a connoisseur of chocolate, boba, cookies, and other cultivated foods. I am a well-known 
+          foodie amongst my friends and one day hope to map out all the best bakeries in the world! My love of food extends to cooking as well, as I enjoy experimenting with new recipes and cuisines.
+          </p>
         </div>
 
-      </div>
+      </div><!-- /.content -->
     </section>
   </div><!-- /#main -->
 
   <footer id="footer"></footer>
+
 </div><!-- /#wrapper -->
 
 <script src="assets/js/jquery.min.js"></script>

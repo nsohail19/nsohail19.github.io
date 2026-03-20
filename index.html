@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Noor Sohail</title>
-  <!-- Site theme (Stellar by HTML5 UP) -->
   <link rel="stylesheet" href="assets/css/main.css" />
-  <!-- Custom overrides — loaded after main.css so they take precedence -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -15,28 +13,30 @@
 <div id="wrapper">
 
   <!-- ═══════════════════════════════════════════
-       SITE HEADER  (shared across all pages)
-       Pink banner: name, title, social icons
+       SITE HEADER — pink banner, name, subtitle, social icons
        ═══════════════════════════════════════════ -->
   <div class="center" style="background-color:rgb(202,150,174);">
     <header id="header">
       <h1><b>Noor Sohail</b></h1>
-      <p>Bioinformatician<br>
-         Harvard Chan Bioinformatics Core<br>
-         Harvard T.H. Chan School of Public Health</p>
-      <!-- Social links: Google Scholar and GitHub -->
+      <!-- .outlined = black text-shadow outline; .plain = clean white -->
+      <p>
+        <span class="outlined">Bioinformatician</span><br>
+        <span class="plain">Harvard Chan Bioinformatics Core</span><br>
+        <span class="plain">Harvard T.H. Chan School of Public Health</span>
+      </p>
+      <!-- Social icons with labels -->
       <ul class="icons">
         <div class="icon-container">
           <li>
             <a href="https://scholar.google.com/citations?user=UNMNBRoAAAAJ&hl=en&oi=ao" target="_blank">
               <i class="fas fa-graduation-cap"></i>
-              <span class="icon-label">Google Scholar</span>
+              <span class="icon-label plain">Google Scholar</span>
             </a>
           </li>
           <li>
             <a href="https://github.com/nsohail19" target="_blank">
               <i class="fab fa-github"></i>
-              <span class="icon-label">GitHub</span>
+              <span class="icon-label plain">GitHub</span>
             </a>
           </li>
         </div>
@@ -45,7 +45,7 @@
   </div>
 
   <!-- ═══════════════════════════════════════════
-       NAVIGATION BAR  (shared across all pages)
+       NAVIGATION BAR
        ═══════════════════════════════════════════ -->
   <nav id="nav">
     <ul>
@@ -53,59 +53,66 @@
       <li><a href="02_work_experience.html">Work Experience</a></li>
       <li><a href="01_publications.html">Publications</a></li>
       <li><a href="03_projects.html">Projects</a></li>
-      <li><a href="04_informal.html">About Me (Informal)</a></li>
+      <li><a href="informal.html">About Me (Informal)</a></li>
     </ul>
   </nav>
 
   <!-- ═══════════════════════════════════════════
-       MAIN CONTENT
+       MAIN CONTENT — About Me
        ═══════════════════════════════════════════ -->
   <div id="main">
     <section id="intro" class="main">
-
-      <!-- About me: text left, headshot right -->
       <div class="spotlight">
+        <!-- .content is a single block; heading renders first at full width,
+             then the image floats right alongside the body paragraphs. -->
         <div class="content">
           <header class="major">
             <h2>About Me</h2>
           </header>
-          <p> 
-            As a computational biologist, I get the best of both worlds! I can work with data/code while simultaneously
-            learning about biology. I love collaborating with scientists across many different disesase and systems to help them develop hypotheses and interpret the results from their experiments.
+
+          <!-- Image floated right from inside .content so it sits
+               below the heading/underline and text wraps around it -->
+          <span class="image">
+            <img src="images/about_me/IMG_5471_crop.jpg" alt="Noor Sohail" />
+          </span>
+          <p>
+            As a computational biologist, I get the best of both worlds! I work with
+            data/code while simultaneously learning about biology. I love collaborating
+            with scientists across many different diseases and disciplines to help them develop
+            hypotheses and interpret results from their experiments.
           </p>
           <p>
             I am currently a Bioinformatician II at the
             <a href="https://bioinformatics.sph.harvard.edu">Harvard Chan Bioinformatics Core</a>
-            (HBC), where I analyze multi-omics data for Harvard labs and develop training materials 
-            to educate researchers on data analysis. My work primarily spans single-cell technologies 
-            and spatial transcriptomics, where I apply computational methods to quantify and interpret cellular heterogeneity in many different tissues and disease contexts.
+            (HBC), where I analyze multi-omics data for Harvard labs and develop training
+            materials to educate researchers on data analysis. My work primarily spans
+            single-cell technologies and spatial transcriptomics, where I quantify and
+            interpret cellular heterogeneity according to biological context.
           </p>
           <p>
             Previously, I was a Computational Biologist at the
             <a href="https://www.mskcc.org/research/ski/innovation-labs/single-cell-analytics-innovation-lab-sail">Single-cell Analysis Innovation Lab</a>
             (SAIL) led by <a href="https://www.mskcc.org/research/ski/labs/dana-pe-er">Dr. Dana Pe'er</a>
-            at Memorial Sloan Kettering Cancer Center. There, I benchmarked, analyzed, and automated the
-            workflows for many different single-cell technologies.
+            at Memorial Sloan Kettering Cancer Center. There, I benchmarked, analyzed, and
+            automated the workflows for different single-cell technologies in the context
+            of cancer.
           </p>
           <p>
-            I am skilled in Python and R, experienced with HPC environments, and cloud computing. My main passions
-            are creating clear visualizations to communicate complex results from high-dimensional data. 
+            I am skilled in Python and R, experienced with HPC environments and cloud
+            computing. My main passions are creating clear visualizations to communicate
+            complex results from high-dimensional data.
           </p>
-        </div>
-        <span class="image">
-          <img src="images/about_me/IMG_5471_crop.jpg" alt="Noor Sohail" />
-        </span>
-      </div>
+        </div><!-- /.content -->
 
+      </div><!-- /.spotlight -->
     </section>
   </div><!-- /#main -->
 
-  <!-- Footer element required by Stellar; hidden via CSS -->
+  <!-- Footer element kept for Stellar JS; hidden via CSS -->
   <footer id="footer"></footer>
 
 </div><!-- /#wrapper -->
 
-<!-- Stellar theme scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>

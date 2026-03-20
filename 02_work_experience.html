@@ -13,26 +13,30 @@
 <div id="wrapper">
 
   <!-- ═══════════════════════════════════════════
-       SITE HEADER
+       SITE HEADER — pink banner, name, subtitle, social icons
        ═══════════════════════════════════════════ -->
   <div class="center" style="background-color:rgb(202,150,174);">
     <header id="header">
       <h1><b>Noor Sohail</b></h1>
-      <p>Bioinformatician<br>
-         Harvard Chan Bioinformatics Core<br>
-         Harvard T.H. Chan School of Public Health</p>
+      <!-- .outlined gets black text-shadow; .plain does not -->
+      <p>
+        <span class="outlined">Bioinformatician</span><br>
+        <span class="plain">Harvard Chan Bioinformatics Core</span><br>
+        <span class="plain">Harvard T.H. Chan School of Public Health</span>
+      </p>
+      <!-- Social icons: Google Scholar and GitHub with labels -->
       <ul class="icons">
         <div class="icon-container">
           <li>
             <a href="https://scholar.google.com/citations?user=UNMNBRoAAAAJ&hl=en&oi=ao" target="_blank">
               <i class="fas fa-graduation-cap"></i>
-              <span class="icon-label">Google Scholar</span>
+              <span class="icon-label plain">Google Scholar</span>
             </a>
           </li>
           <li>
             <a href="https://github.com/nsohail19" target="_blank">
               <i class="fab fa-github"></i>
-              <span class="icon-label">GitHub</span>
+              <span class="icon-label plain">GitHub</span>
             </a>
           </li>
         </div>
@@ -54,7 +58,7 @@
   </nav>
 
   <!-- ═══════════════════════════════════════════
-       MAIN CONTENT
+       MAIN CONTENT — Work Experience
        ═══════════════════════════════════════════ -->
   <div id="main">
     <section id="work" class="main">
@@ -62,16 +66,14 @@
         <h2>Work Experience</h2>
       </header>
 
-      <!-- Link to full CV PDF (opens inline viewer) -->
+      <!-- Centred link to full CV inline viewer -->
       <div class="cv-btn-wrap">
         <a href="02a_CV.html" class="button primary">Full CV</a>
       </div>
 
-      <!-- ───────────────────────────────────────
-           Timeline: each row = one position.
-           Logo left (25%), details right (75%).
-           Rows stripe odd/even via CSS.
-           ─────────────────────────────────────── -->
+      <!-- Timeline grid: logo cell (25%) | text cell (75%).
+           All logos rendered at --work-logo-size square via CSS.
+           Rows stripe odd/even via CSS. -->
       <div class="timeline">
 
         <div class="timeline-item">
@@ -94,7 +96,7 @@
             <div class="timeline-date">Apr 2021 – Apr 2023</div>
             <div class="timeline-title">Computational Biologist</div>
             <div class="timeline-org">Sloan Kettering Institute — Single-cell Analysis Innovation Lab (SAIL)</div>
-            <p class="timeline-desc">Analyzed and built pipelines for scRNA-seq using current computational approaches including dimensionality reduction, differential gene expression analysis, and GSEA.</p>
+            <p class="timeline-desc">Analyzed and built pipelines for scRNA-seq using dimensionality reduction, differential gene expression analysis, and GSEA.</p>
           </div>
         </div>
 
@@ -130,7 +132,7 @@
             <div class="timeline-date">May 2018 – Aug 2018 &amp; May 2019 – Aug 2019</div>
             <div class="timeline-title">Summer Research Intern</div>
             <div class="timeline-org">Van Andel Research Institute</div>
-            <p class="timeline-desc">Maintained and extended MTseeker, an R Bioconductor package that isolates variants in mitochondrial DNA to trace lineages in single-cell samples.</p>
+            <p class="timeline-desc">Maintained and extended MTseeker, an R Bioconductor package isolating mitochondrial DNA variants to trace lineages in single-cell samples.</p>
           </div>
         </div>
 
@@ -154,7 +156,7 @@
             <div class="timeline-date">Oct 2017 – Dec 2019</div>
             <div class="timeline-title">Undergraduate Researcher</div>
             <div class="timeline-org">University of Michigan — Department of Chemistry</div>
-            <p class="timeline-desc">Simulated protein–ligand interactions using computational chemistry techniques to determine free energies of binding.</p>
+            <p class="timeline-desc">Simulated protein–ligand interactions using computational chemistry to determine free energies of binding.</p>
           </div>
         </div>
 
@@ -173,15 +175,17 @@
     </section>
   </div><!-- /#main -->
 
+  <!-- Footer element kept for Stellar JS; hidden via CSS -->
   <footer id="footer"></footer>
+
 </div><!-- /#wrapper -->
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
