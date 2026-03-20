@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Noor Sohail</title>
-  <!-- Site theme (Stellar by HTML5 UP) -->
+  <title>Noor Sohail – About Me (Informal)</title>
   <link rel="stylesheet" href="assets/css/main.css" />
-  <!-- Custom overrides — loaded after main.css so they take precedence -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -15,8 +13,7 @@
 <div id="wrapper">
 
   <!-- ═══════════════════════════════════════════
-       SITE HEADER  (shared across all pages)
-       Pink banner: name, title, social icons
+       SITE HEADER
        ═══════════════════════════════════════════ -->
   <div class="center" style="background-color:rgb(202,150,174);">
     <header id="header">
@@ -24,7 +21,6 @@
       <p>Bioinformatician<br>
          Harvard Chan Bioinformatics Core<br>
          Harvard T.H. Chan School of Public Health</p>
-      <!-- Social links: Google Scholar and GitHub -->
       <ul class="icons">
         <div class="icon-container">
           <li>
@@ -45,15 +41,15 @@
   </div>
 
   <!-- ═══════════════════════════════════════════
-       NAVIGATION BAR  (shared across all pages)
+       NAVIGATION BAR
        ═══════════════════════════════════════════ -->
   <nav id="nav">
     <ul>
-      <li><a href="index.html" class="active">About Me</a></li>
+      <li><a href="index.html">About Me</a></li>
       <li><a href="02_work_experience.html">Work Experience</a></li>
       <li><a href="01_publications.html">Publications</a></li>
       <li><a href="03_projects.html">Projects</a></li>
-      <li><a href="04_informal.html">About Me (Informal)</a></li>
+      <li><a href="04_04_informal.html" class="active">About Me (Informal)</a></li>
     </ul>
   </nav>
 
@@ -61,51 +57,61 @@
        MAIN CONTENT
        ═══════════════════════════════════════════ -->
   <div id="main">
-    <section id="intro" class="main">
+    <section id="informal" class="main">
+      <div class="content">
+        <header class="major">
+          <h2>About Me (Informal)</h2>
+        </header>
 
-      <!-- About me: text left, headshot right -->
-      <div class="spotlight">
-        <div class="content">
-          <header class="major">
-            <h2>About Me</h2>
-          </header>
-          <p> 
-            As a computational biologist, I get the best of both worlds! I can work with data/code while simultaneously
-            learning about biology. I love collaborating with scientists across many different disesase and systems to help them develop hypotheses and interpret the results from their experiments.
-          </p>
-          <p>
-            I am currently a Bioinformatician II at the
-            <a href="https://bioinformatics.sph.harvard.edu">Harvard Chan Bioinformatics Core</a>
-            (HBC), where I analyze multi-omics data for Harvard labs and develop training materials 
-            to educate researchers on data analysis. My work primarily spans single-cell technologies 
-            and spatial transcriptomics, where I apply computational methods to quantify and interpret cellular heterogeneity in many different tissues and disease contexts.
-          </p>
-          <p>
-            Previously, I was a Computational Biologist at the
-            <a href="https://www.mskcc.org/research/ski/innovation-labs/single-cell-analytics-innovation-lab-sail">Single-cell Analysis Innovation Lab</a>
-            (SAIL) led by <a href="https://www.mskcc.org/research/ski/labs/dana-pe-er">Dr. Dana Pe'er</a>
-            at Memorial Sloan Kettering Cancer Center. There, I benchmarked, analyzed, and automated the
-            workflows for many different single-cell technologies.
-          </p>
-          <p>
-            I am skilled in Python and R, experienced with HPC environments, and cloud computing. My main passions
-            are creating clear visualizations to communicate complex results from high-dimensional data. 
-          </p>
+        <!-- ───────────────────────────────────────
+             ZONE 1: Intro paragraph + portrait
+             Text fills the left, square photo right.
+             ─────────────────────────────────────── -->
+        <div class="informal-intro">
+          <p>When not working with my fellow scientists, I also collaborate frequently with
+          Tom Nook in real estate endeavors, where I have applied my experience in biology
+          to uncover a full fossil collection that has contributed to the meteoric rise of
+          our island to a five star rating.</p>
+          <div class="informal-photo">
+            <img src="images/about_me/IMG_20200313_002958.jpg" alt="Noor" />
+          </div>
         </div>
-        <span class="image">
-          <img src="images/about_me/IMG_5471_crop.jpg" alt="Noor Sohail" />
-        </span>
-      </div>
 
+        <!-- ───────────────────────────────────────
+             ZONE 2: Masonry photo grid
+             Left column (ig-tall) spans both rows —
+             creates a tall accent image beside two
+             shorter stacked images on the right.
+             ─────────────────────────────────────── -->
+        <div class="informal-grid">
+          <div class="ig-tall">
+            <img src="images/about_me/fossils.jpg" alt="Fossil collection" />
+          </div>
+          <div>
+            <img src="images/about_me/tom_nook.jpg" alt="Tom Nook" />
+          </div>
+          <div>
+            <img src="images/about_me/bread.jpg" alt="Bread" />
+          </div>
+        </div>
+
+        <!-- ───────────────────────────────────────
+             ZONE 3: Food photo + caption paragraph
+             Photo left, text right.
+             ─────────────────────────────────────── -->
+        <div class="informal-food">
+          <img src="images/about_me/20220514_125737.jpg" alt="Food" />
+          <p>When not studying living things, I can often be found consuming them.
+          I am a connoisseur of chocolate, boba, cookies, and other cultivated foods.</p>
+        </div>
+
+      </div>
     </section>
   </div><!-- /#main -->
 
-  <!-- Footer element required by Stellar; hidden via CSS -->
   <footer id="footer"></footer>
-
 </div><!-- /#wrapper -->
 
-<!-- Stellar theme scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>

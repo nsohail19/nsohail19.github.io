@@ -1,300 +1,537 @@
-body {
-    color: #000000;
-    background: #FFF;
-    font-family: "Effra", Helvetica, sans-serif;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #3D4351;
-    margin-top: 0;
-  }
-  
-  a {
-    color: #FF6B6B;
-  }
-  a:link,
-  a:visited,
-  a:hover,
-  a:active{
-      text-decoration: none;
-  }
-    
-  .example-header {
-    background: #3D4351;
-    color: #FFF;
-    font-weight: 300;
-    padding: 3em 1em;
-    text-align: center;
-  }
-  .example-header h1 {
-    color: #FFF;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-  .example-header p {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-  }
-  
-  .container-fluid .row {
-    padding: 0 0 4em 0;
-  }
-  .container-fluid .row:nth-child(even) {
-    background: #F1F4F5;
-  }
-  
-  .example-title {
-    text-align: center;
-    margin-bottom: 60px;
-    padding: 3em 0;
-    border-bottom: 1px solid #E4EAEC;
-  }
-  .example-title p {
-    margin: 0 auto;
-    font-size: 16px;
-    max-width: 400px;
-  }
-  
-  /*==================================
-      TIMELINE
-  ==================================*/
-  /*-- GENERAL STYLES
-  ------------------------------*/
-  .timeline {
-    line-height: 1.4em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
-    line-height: inherit;
-  }
-  
-  /*----- TIMELINE ITEM -----*/
-  .timeline-item {
-    padding-left: 40px;
-    position: relative;
-  }
-  .timeline-item:last-child {
-    padding-bottom: 0;
-  }
-  
-  /*----- TIMELINE INFO -----*/
-  .timeline-info {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin: 0 0 0.5em 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  
-  /*----- TIMELINE MARKER -----*/
-  .timeline-marker {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 15px;
-  }
-  .timeline-marker:before {
-    background: #FF6B6B;
-    border: 3px solid transparent;
-    border-radius: 100%;
-    content: "";
-    display: block;
-    height: 15px;
-    position: absolute;
-    top: 4px;
-    left: 0;
-    width: 15px;
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-  }
-  .timeline-marker:after {
-    content: "";
-    width: 3px;
-    background: #CCD5DB;
-    display: block;
-    position: absolute;
-    top: 24px;
-    bottom: 0;
-    left: 6px;
-  }
-  .timeline-item:last-child .timeline-marker:after {
-    content: none;
-  }
-  
-  .timeline-item:not(.period):hover .timeline-marker:before {
-    background: transparent;
-    border: 3px solid #FF6B6B;
-  }
-  
-  /*----- TIMELINE CONTENT -----*/
-  .timeline-content {
-    padding-bottom: 40px;
-  }
-  .timeline-content p:last-child {
-    margin-bottom: 0;
-  }
-  
-  /*----- TIMELINE PERIOD -----*/
-  .period {
-    padding: 0;
-  }
-  .period .timeline-info {
-    display: none;
-  }
-  .period .timeline-marker:before {
-    background: transparent;
-    content: "";
-    width: 15px;
-    height: auto;
-    border: none;
-    border-radius: 0;
-    top: 0;
-    bottom: 30px;
-    position: absolute;
-    border-top: 3px solid #CCD5DB;
-    border-bottom: 3px solid #CCD5DB;
-  }
-  .period .timeline-marker:after {
-    content: "";
-    height: 32px;
-    top: auto;
-  }
-  .period .timeline-content {
-    padding: 40px 0 70px;
-  }
-  .period .timeline-title {
-    margin: 0;
-  }
-  
-  /*----------------------------------------------
-      MOD: TIMELINE SPLIT
-  ----------------------------------------------*/
-  @media (min-width: 768px) {
-    .timeline-split .timeline, .timeline-centered .timeline {
-      display: table;
-    }
-    .timeline-split .timeline-item, .timeline-centered .timeline-item {
-      display: table-row;
-      padding: 0;
-    }
-    .timeline-split .timeline-info, .timeline-centered .timeline-info,
-  .timeline-split .timeline-marker,
-  .timeline-centered .timeline-marker,
-  .timeline-split .timeline-content,
-  .timeline-centered .timeline-content,
-  .timeline-split .period .timeline-info {
-      display: table-cell;
-      vertical-align: top;
-    }
-    .timeline-split .timeline-marker, .timeline-centered .timeline-marker {
-      position: relative;
-    }
-    .timeline-split .timeline-content, .timeline-centered .timeline-content {
-      padding-left: 30px;
-    }
-    .timeline-split .timeline-info, .timeline-centered .timeline-info {
-      padding-right: 30px;
-    }
-    .timeline-split .period .timeline-title, .timeline-centered .period .timeline-title {
-      position: relative;
-      left: -45px;
-    }
-  }
-  
-  /*----------------------------------------------
-      MOD: TIMELINE CENTERED
-  ----------------------------------------------*/
-  @media (min-width: 992px){
-    .timeline-centered,
-  .timeline-centered .timeline-item,
-  .timeline-centered .timeline-info,
-  .timeline-centered .timeline-marker,
-  .timeline-centered .timeline-content {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-    .timeline-centered .timeline-item {
-      padding-bottom: 40px;
-      overflow: hidden;
-    }
-    .timeline-centered .timeline-marker {
-      position: absolute;
-      left: 50%;
-      margin-left: -7.5px;
-    }
-    .timeline-centered .timeline-info,
-  .timeline-centered .timeline-content {
-      width: 50%;
-    }
-    .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
-      float: left;
-      text-align: right;
-      padding-right: 30px;
-    }
-    .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
-      float: right;
-      text-align: left;
-      padding-left: 30px;
-    }
-    .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
-      float: right;
-      text-align: left;
-      padding-left: 30px;
-    }
-    .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
-      float: left;
-      text-align: right;
-      padding-right: 30px;
-    }
-    .timeline-centered > .timeline-item.period .timeline-content {
-      float: none;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-    }
-    .timeline-centered .timeline-item.period {
-      padding: 50px 0 90px;
-    }
-    .timeline-centered .period .timeline-marker:after {
-      height: 30px;
-      bottom: 0;
-      top: auto;
-    }
-    .timeline-centered .period .timeline-title {
-      left: auto;
-    }
-  }
-  
-  /*----------------------------------------------
-      MOD: MARKER OUTLINE
-  ----------------------------------------------*/
-  .marker-outline .timeline-marker:before {
-    background: transparent;
-    border-color: #FF6B6B;
-  }
-  .marker-outline .timeline-item:hover .timeline-marker:before {
-    background: #FF6B6B;
-  }
+/* =============================================================
+   styles.css — Noor Sohail personal website
+   Loaded after assets/css/main.css; uses !important selectively
+   to override the Stellar HTML5 UP theme defaults.
+   ============================================================= */
 
-  /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   Central place for every colour, font, and size used sitewide.
+   Change a value here and it propagates everywhere.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Typography */
+  --font:           'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Brand palette */
+  --header-bg:      rgb(202, 150, 174);   /* pink header band */
+  --name-color:     rgb(202, 150, 174);   /* "Noor Sohail" matches header */
+  --accent:         #7a4f6d;              /* mauve — links, active state */
+  --accent-light:   #c9a0b8;             /* rule under headings */
+  --accent-dark:    #4e2f44;             /* hover, sub-headings */
+  --nav-bg:         #3b2435;             /* dark plum nav bar */
+
+  /* Text */
+  --text:           #2d2d2d;
+  --text-muted:     #666;
+
+  /* Surfaces */
+  --page-bg:        #f5f0f3;             /* warm blush-grey page background */
+  --content-bg:     #ffffff;
+  --row-stripe:     #f0eaee;             /* alternating table row tint */
+  --border:         #e2dce0;
+
+  /* Component sizes */
+  --icon-size:      3.2rem;              /* header icon glyph (2× the old 1.6rem) */
+  --icon-label-size: 0.72rem;           /* label text below icon (2× the old 0.36rem) */
+
+  /* Work-experience image cell: uniform 80×80 px thumbnail */
+  --work-img-size:  80px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+
+/* ─────────────────────────────────────────────────────────────
+   GLOBAL RESET / BASE
+   Applies Helvetica Neue across every element and sets
+   comfortable body defaults.
+   ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, li, td, th, a, button, input, label, span {
+  font-family: var(--font) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  /* Solid warm blush-grey instead of any background image */
+  background-color: var(--page-bg) !important;
+  background-image: none !important;
+}
+
+p, li { line-height: 1.8; color: var(--text); }
+td    { line-height: 1.7; color: var(--text); }
+
+a { color: var(--accent); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+/* Strip all borders and shadows from images sitewide */
+img { border: none !important; box-shadow: none !important; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   SITE HEADER
+   Pink banner containing name, subtitle, and social icons.
+   ───────────────────────────────────────────────────────────── */
+#header { padding: 2.2em 1em 1.8em; }
+
+/* "Noor Sohail" — matches the header band colour with black outline */
+#header h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--name-color);          /* same pink as header background */
+  /* Thin black outline makes the pink name legible on the pink bg */
+  text-shadow:
+    -1.5px -1.5px 0 rgba(0,0,0,0.7),
+     1.5px -1.5px 0 rgba(0,0,0,0.7),
+    -1.5px  1.5px 0 rgba(0,0,0,0.7),
+     1.5px  1.5px 0 rgba(0,0,0,0.7);
+  margin-bottom: 0.3em;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Prevent Stellar from adding decorative pseudo-element lines */
+#header h1::before, #header h1::after { display: none !important; }
+
+/* Subtitle line "Bioinformatician / Harvard…" — white with outline */
+#header p {
+  font-size: 1.0em;
+  font-weight: 500;
+  line-height: 1.65;
+  color: #fff;
+  background: none;
+  padding: 0;
+  letter-spacing: 0.01em;
+  /* Black outline keeps white text readable against the pale pink */
+  text-shadow:
+    -1px -1px 0 rgba(0,0,0,0.55),
+     1px -1px 0 rgba(0,0,0,0.55),
+    -1px  1px 0 rgba(0,0,0,0.55),
+     1px  1px 0 rgba(0,0,0,0.55);
+  border: none !important;
+}
+#header p::before, #header p::after { display: none !important; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   HEADER SOCIAL ICONS
+   Two icons (Google Scholar, GitHub) centered below the subtitle.
+   Each is a flex column: glyph on top, short label underneath.
+   ───────────────────────────────────────────────────────────── */
+.icon-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;    /* tops of icon columns line up */
+  margin-top: 1.2em;
+}
+
+.icon-container a {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--icon-size) !important;   /* controls glyph size */
+  color: rgba(255,255,255,0.92) !important;
+  text-decoration: none !important;
+  transition: color .2s, transform .2s;
+  line-height: 1;
+}
+.icon-container a:hover {
+  color: #fff !important;
+  transform: translateY(-3px);
+  text-decoration: none !important;
+}
+
+/* Small uppercase label underneath each icon glyph */
+.icon-container a .icon-label {
+  font-size: var(--icon-label-size) !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9) !important;
+  /* Outline for legibility on pale background */
+  text-shadow:
+    -1px -1px 0 rgba(0,0,0,0.4),
+     1px  1px 0 rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   NAVIGATION BAR
+   Dark plum horizontal bar with pill highlights on hover/active.
+   ───────────────────────────────────────────────────────────── */
+#nav { background: var(--nav-bg) !important; }
+
+/* Allow nav items to wrap on narrow screens */
+#nav ul { display: flex; flex-wrap: wrap; justify-content: center; }
+
+#nav ul li a {
+  font-size: 0.82em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78) !important;
+  background: transparent !important;
+  padding: 0.65em 1.1em;
+  border-radius: 3px;
+  transition: color .2s, background .2s;
+  text-decoration: none !important;
+  display: block;
+}
+/* Hover: light mauve pill */
+#nav ul li a:hover  { color: #fff !important; background: var(--accent) !important; }
+/* Active (current page): solid mauve, full white text */
+#nav ul li a.active { color: #fff !important; background: var(--accent) !important; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   White card on top of the page-bg colour.
+   ───────────────────────────────────────────────────────────── */
+#main { background: var(--content-bg); }
+#main section.main { padding: 2.5em 3em 2em; }
+
+/* Page-level heading (e.g. "About Me", "Publications") */
+#main .major h2 {
+  font-size: 1.75em;
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent-light) !important;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  box-shadow: none !important;
+}
+#main .major h2::before,
+#main .major h2::after { display: none !important; }
+
+/* Sub-section labels e.g. "Workshops", "Workflows" */
+#main h3 {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin: 2em 0 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* Comfortable body text inside main */
+#main p, #main li { font-size: 1.0em; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   BUTTONS
+   Primary (mauve) button used for the Full CV link.
+   display:flex + align-items:center ensures the label is
+   vertically centred regardless of line-height quirks.
+   ───────────────────────────────────────────────────────────── */
+.button.primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 1.0em;
+  padding: 0.7em 1.8em;
+  line-height: 1 !important;      /* prevents inherited line-height from offsetting text */
+}
+.button.primary:hover {
+  background: var(--accent-dark) !important;
+  border-color: var(--accent-dark) !important;
+}
+
+/* Wrapper that centres the CV button on the page */
+.cv-btn-wrap {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   PUBLICATIONS TABLE
+   Two columns: small figure thumbnail | title + citation.
+   Odd/even rows are striped for readability.
+   ───────────────────────────────────────────────────────────── */
+.pub-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+.pub-table tbody tr:nth-child(odd)  td { background: var(--row-stripe); }
+.pub-table tbody tr:nth-child(even) td { background: var(--content-bg); }
+.pub-table td {
+  padding: 1.1em 1em;
+  vertical-align: middle;
+  border: none;
+}
+
+/* Left column: square thumbnail */
+.pub-table td.pub-img { width: 110px; min-width: 90px; text-align: center; }
+.pub-table td.pub-img img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Right column: link title */
+.pub-table .pub-title { font-size: 1.0em; font-weight: 600; color: var(--accent); }
+.pub-table .pub-title:hover { color: var(--accent-dark); }
+
+/* Citation line below title */
+.pub-table .pub-meta {
+  font-size: 0.88em;
+  color: var(--text-muted);
+  margin-top: 0.25em;
+  font-style: italic;
+}
+
+/* Small "preprint" pill badge */
+.pub-badge {
+  display: inline-block;
+  background: #ede6ea;
+  border-radius: 3px;
+  padding: 0.1em 0.45em;
+  font-size: 0.76em;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-left: 0.4em;
+  vertical-align: middle;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   WORK EXPERIENCE TIMELINE
+   Two-column grid: logo cell (25%) | text cell (75%).
+   All logos are cropped to exactly --work-img-size square so
+   every row image is identical in height and width.
+   Odd/even rows are striped.
+   ───────────────────────────────────────────────────────────── */
+.timeline { padding: 0; }
+.timeline::before { display: none; }  /* remove any decorative line */
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 0 2em;
+  /* Vertical padding sets row height; logo is 75% of this */
+  padding: 1.4em 1em;
+  align-items: center;
+}
+.timeline-item:nth-child(odd)  { background: var(--row-stripe); }
+.timeline-item:nth-child(even) { background: var(--content-bg); }
+
+/* Logo cell: centred, fixed square */
+.timeline-logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline-logo {
+  /* Fixed square thumbnail — all logos same size */
+  width:  var(--work-img-size);
+  height: var(--work-img-size);
+  object-fit: contain;     /* keeps aspect ratio, no cropping of logos */
+  display: block;
+}
+
+/* Text cell: stacked date / title / org / description */
+.timeline-text-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.timeline-date {
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.18em;
+}
+.timeline-title {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.06em;
+}
+.timeline-org {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-bottom: 0.3em;
+}
+.timeline-desc {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   CV IFRAME EMBED
+   Full-width iframe that shows the PDF inline (no download).
+   ───────────────────────────────────────────────────────────── */
+.cv-embed-wrap { width: 100%; text-align: center; }
+.cv-embed-wrap iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+  min-height: 600px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   PROJECTS TABLE
+   Same two-column striped layout as publications.
+   ───────────────────────────────────────────────────────────── */
+.projects-section { margin-bottom: 2.5em; }
+.projects-section h3 { margin-top: 0; margin-bottom: 0.7em; }
+
+.project-table { width: 100%; border-collapse: collapse; }
+.project-table tbody tr:nth-child(odd)  td { background: var(--row-stripe); }
+.project-table tbody tr:nth-child(even) td { background: var(--content-bg); }
+.project-table td { padding: 1.0em 1em; vertical-align: middle; border: none; }
+
+/* Left column: preview image */
+.project-table td.proj-img { width: 25%; min-width: 90px; text-align: center; }
+.project-table td.proj-img img {
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-table td.proj-text { vertical-align: middle; }
+.project-table .proj-title  { font-size: 1.0em; font-weight: 600; color: var(--accent); }
+.project-table .proj-title:hover { color: var(--accent-dark); }
+.project-table p {
+  margin: 0.3em 0 0;
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.65;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   INFORMAL PAGE LAYOUT
+   Three distinct zones, each handled by a named class:
+     .informal-intro  — text left, portrait right
+     .informal-grid   — masonry photo grid
+     .informal-food   — food photo left, text right
+   ───────────────────────────────────────────────────────────── */
+
+/* Zone 1: text paragraph + square portrait */
+.informal-intro {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 2em;
+  align-items: start;
+  margin-bottom: 2em;
+}
+.informal-intro p { margin: 0; font-size: 1.05em; }
+.informal-intro .informal-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Zone 2: 2-column masonry grid (left col spans both rows) */
+.informal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75em;
+  margin-bottom: 2em;
+}
+.informal-grid .ig-tall { grid-row: 1 / 3; }   /* left image spans full height */
+.informal-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  display: block;
+}
+.informal-grid .ig-tall img { min-height: 390px; }
+
+/* Zone 3: food photo + paragraph */
+.informal-food {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2em;
+  align-items: center;
+}
+.informal-food img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.informal-food p { margin: 0; font-size: 1.05em; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   FOOTER — hidden sitewide
+   ───────────────────────────────────────────────────────────── */
+#footer { display: none !important; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE BREAKPOINTS
+
+   ≤900px  tablet / small laptop
+   ≤600px  phone
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  #main section.main { padding: 2em 1.5em 1.5em; }
+
+  /* Stack logo above text in work experience */
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.6em 0;
+  }
+  .timeline-logo-cell { justify-content: flex-start; }
+
+  /* Hide figure thumbnails to give text more room */
+  .pub-table td.pub-img     { display: none; }
+  .project-table td.proj-img { display: none; }
+
+  /* Informal: collapse multi-column layouts to single column */
+  .informal-intro { grid-template-columns: 1fr; }
+  .informal-grid  { grid-template-columns: 1fr; }
+  .informal-grid .ig-tall { grid-row: auto; }
+  .informal-grid .ig-tall img,
+  .informal-grid img { min-height: 220px; }
+  .informal-food { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  /* Shrink header text on very small screens */
+  #header h1 { font-size: 1.7em; }
+  #header p  { font-size: 0.9em; }
+
+  /* Scale icons down proportionally */
+  .icon-container { gap: 2rem; }
+  .icon-container a { font-size: 2.2rem !important; }
+  .icon-container a .icon-label { font-size: 0.58rem !important; }
+
+  /* Tighter nav tabs */
+  #nav ul li a { font-size: 0.74em; padding: 0.55em 0.65em; }
+
+  /* Tighter content padding */
+  #main section.main { padding: 1.5em 1em 1em; }
+  #main .major h2    { font-size: 1.4em; }
 }
