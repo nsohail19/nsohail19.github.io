@@ -523,3 +523,13 @@ img { border: none !important; box-shadow: none !important; }
   #header h1 strong { font-size: 1.4em !important; }
   #header p         { font-size: 0.9em !important; }
 }
+
+@media screen and (max-width: 980px) {
+  #nav {
+    display: block !important;
+  }
+  #nav ul {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+}
