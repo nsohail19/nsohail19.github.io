@@ -533,3 +533,25 @@ img { border: none !important; box-shadow: none !important; }
     flex-wrap: wrap;
   }
 }
+
+/* Mobile nav: full‑width, not overlapping content */
+@media screen and (max-width: 980px) {
+  /* Make sure nav is part of the normal flow, not fixed/overlayed */
+  #nav {
+    position: relative !important;   /* or 'static' if you prefer */
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;     /* remove any rounding so it matches header width */
+  }
+
+  /* Ensure the list stretches and centers correctly */
+  #nav ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100% !important;
+  }
+}
