@@ -555,3 +555,9 @@ img { border: none !important; box-shadow: none !important; }
     width: 100% !important;
   }
 }
+
+@media screen and (max-width: 980px) {
+  #main {
+    margin-top: 0.5rem !important;   /* tweak up/down as needed */
+  }
+}
