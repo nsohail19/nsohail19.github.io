@@ -561,3 +561,48 @@ img { border: none !important; box-shadow: none !important; }
     margin-top: 0.5rem !important;   /* tweak up/down as needed */
   }
 }
+
+/* 1) Mobile nav: full‑width, not constrained by theme max-width */
+@media screen and (max-width: 980px) {
+  #nav {
+    position: relative !important;
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;   /* cancel any theme max-width */
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 !important;  /* so it lines up cleanly with the header */
+  }
+
+  #nav ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .pub-table td.pub-img { display: none; }
+  .project-table td.proj-img { display: none; }
+}
+
+/* 2) Re‑enable publication and project images on mobile */
+@media (max-width: 900px) {
+  .pub-table td.pub-img,
+  .project-table td.proj-img {
+    display: table-cell !important;  /* or 'block' if you prefer stacked layout */
+    width: auto !important;
+  }
+
+  .pub-table td.pub-img img,
+  .project-table td.proj-img img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
