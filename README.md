@@ -14,13 +14,13 @@ teaching.html           HBC training workshops and mentorship
 beyond-the-lab.html     Personal page
 css/style.css           All styling; colors and fonts are set at the top in :root
 favicon.svg             Browser-tab icon
-files/                  Downloadable documents (Noor_Sohail_CV.pdf)
+files/                  Downloadable documents (sohail_cv_research.pdf)
 img/                    Images, grouped by page (logos/, publications/, teaching/, beyond/)
 ```
 
 ## Common updates
 
-- **New CV:** replace `files/Noor_Sohail_CV.pdf` with the new PDF, keeping the same file name.
+- **New CV:** replace `files/sohail_cv_research.pdf` with the new PDF, keeping the same file name (or update the link in `experience.html`).
 - **New publication:** copy one `<li class="pub">` block in `publications.html` and edit it.
   Wrap your name as `<span class="me">Sohail N</span>` so it shows in bold color.
   Thumbnails go in `img/publications/` (about 400 px wide).
